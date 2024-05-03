@@ -1,0 +1,27 @@
+[package]
+org = "ballerinax"
+name = "socialmedia"
+version = "0.1.0"
+distribution = "2201.9.0-20240419-152500-bd530dd2"
+
+[build-options]
+observabilityIncluded = true
+
+[[tool.persist]]
+id = "generate-db-client"
+targetModule = "socialmedia.store"
+options.datastore = "redis"
+filePath = "persist/model.bal"
+
+[[platform.java17.dependency]]
+groupId = "io.ballerina.lib"
+artifactId = "persist.redis-native"
+version = "0.1.0-SNAPSHOT"
+
+[[platform.java17.repository]]
+id="wso2-nexus"
+url = "https://maven.wso2.org/nexus/content/groups/public/"
+
+[[platform.java17.repository]]
+id="wso2-nexus-snapshot"
+url = "https://maven.wso2.org/nexus/content/repositories/snapshots/"

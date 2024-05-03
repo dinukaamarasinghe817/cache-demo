@@ -1,0 +1,27 @@
+### Insert a user
+POST http://localhost:9090/socialmedia/users
+Content-Type: application/json
+
+{
+    "id": 1,
+    "email": "john.doe@gmail.com",
+    "firstName": "John",
+    "lastName": "Doe",
+    "gender": "MALE",
+    "dateOfBirth": {"year": 2000, "month": 8, "day": 17},
+    "bio": "A passionate blogger and software engineer"
+}
+
+### Insert a post
+POST http://localhost:9090/socialmedia/posts
+Content-Type: application/json
+
+{
+    "id": 1,
+    "title": "Introduction to Redis Object Mapping",
+    "content": "Redis object mapping allows users to...",
+    "userId": 1
+}
+
+### Retrieve a user
+GET http://localhost:9090/socialmedia/users/1
